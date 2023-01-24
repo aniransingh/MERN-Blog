@@ -17,7 +17,12 @@ mongoose.connection.on("connected", () => {
     console.log("DB CONNECTED");
 })
 
+
 app.use("/auth", authRouter);
+
+app.get('/', (req, res) => {
+    res.send(<center>AWS MERN BLOG PROJECT</center>)
+})
 
 app.listen(4000, () => {
     console.log("server listening on port 4000");
