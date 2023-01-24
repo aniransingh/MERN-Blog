@@ -12,7 +12,7 @@ app.use(express.json());
 
 // DB Connection
 mongoose.set("strictQuery", true);
-mongoose.connect(process.env.MONGO_URI);
+mongoose.connect("mongodb+srv://aniran:1234@nodeexpressprojects.wvsdwww.mongodb.net/?retryWrites=true&w=majority");
 mongoose.connection.on("connected", () => {
     console.log("DB CONNECTED");
 })
