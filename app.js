@@ -21,9 +21,9 @@ mongoose.connection.on("connected", () => {
 app.use("/auth", authRouter);
 
 app.get('/', (req, res) => {
-    res.send(<center>AWS MERN BLOG PROJECT</center>)
+    res.sendFile(__dirname + "/index.html");
 })
 
 app.listen(4000, () => {
-    console.log("server listening on port 4000");
+    console.log("server listening on port 4000", __dirname, __filename);
 });
